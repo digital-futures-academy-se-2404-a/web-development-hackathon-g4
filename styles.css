@@ -55,14 +55,113 @@ p {
   width: 500px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .whatsOnBody {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .whatsOnBody header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0 !important;
+  }
+  .whatsOnBody header .navbar {
+    gap: 30px;
+    padding: 5px;
+  }
+  .whatsOnBody .container .nowShowing {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    gap: 20px !important;
+  }
+  .whatsOnBody .container .nowShowing h1 {
+    height: 50% !important;
+  }
+  .whatsOnBody .container .openingTimes {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    gap: 20px !important;
+  }
+  .whatsOnBody .container .openingTimes .openingText {
+    height: 60% !important;
+    padding: 8px;
+  }
+  .whatsOnBody .container .showingTimes {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    gap: 20px !important;
+  }
+  .whatsOnBody .container .showingTimes .movieTitle {
+    height: 180px !important;
+  }
+  .whatsOnBody .container .showingTimes .movieSynopsis {
+    height: 180px !important;
+  }
+  .whatsOnBody .container .showingTimes .movieSynopsis p {
+    font-size: 12px;
+  }
+  .whatsOnBody .container .showingTimes .screensAndTimes {
+    height: 180px !important;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .whatsOnBody {
+    width: calc(100% - 20px);
+    padding-left: 45px !important;
+    padding-right: 10px !important;
+  }
+  .whatsOnBody .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .whatsOnBody .container {
+    align-items: center;
+  }
+  .whatsOnBody .container .nowShowing {
+    flex-direction: column !important;
+  }
+  .whatsOnBody .container .nowShowing .sliderSection {
+    width: 500px;
+  }
+  .whatsOnBody .container .nowShowing h1 {
+    width: 500px;
+  }
+  .whatsOnBody .container .openingTimes {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 12px;
+    flex-direction: column !important;
+  }
+  .whatsOnBody .container .openingTimes .openingText {
+    width: 500px;
+    align-items: center;
+  }
+  .whatsOnBody .container .showingTimes {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    flex-direction: column !important;
+  }
+  .whatsOnBody .container .showingTimes img {
+    width: 500px;
+  }
+  .whatsOnBody .container .showingTimes .movieTitle {
+    width: 500px;
+  }
+  .whatsOnBody .container .showingTimes .screensAndTimes {
+    width: 500px;
+  }
+}
 .whatsOnBody {
-  width: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
+  width: calc(100% - 100px);
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .whatsOnBody header {
   height: 100px;
-  width: 100%;
+  padding-left: 150px;
 }
 .whatsOnBody header .navbar {
   display: flex;
@@ -70,9 +169,12 @@ p {
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
-  margin-right: 70%;
+  max-width: 550px;
   padding: 10px;
-  background-color: #9996db;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
@@ -100,23 +202,180 @@ p {
 .whatsOnBody header .navbar h2:hover::after {
   width: 105%;
 }
-.whatsOnBody .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.whatsOnBody .container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  width: 100%;
+  color: #d6d6d6;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.whatsOnBody .container .nowShowing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  height: 340px;
+}
+.whatsOnBody .container .nowShowing .sliderSection {
+  flex: 4;
+  height: 100%;
   gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  flex-direction: column;
 }
-.whatsOnBody .grid-container .NowShowing {
-  grid-column: 3;
-  grid-row: 1;
+.whatsOnBody .container .nowShowing .sliderSection .slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
-.whatsOnBody .grid-container .OpeningTimes {
-  grid-column: 1;
-  grid-row: 2;
+.whatsOnBody .container .nowShowing .sliderSection .slider img {
+  height: 300px;
+  width: 100%;
+  border-radius: 25px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.8s;
+  object-fit: cover;
 }
-.whatsOnBody .grid-container .OpeningTimesImage {
-  grid-column: 2/4;
-  grid-row: 2;
+.whatsOnBody .container .nowShowing .sliderSection .slider img:first-child {
+  z-index: 10;
+}
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ececec;
+  border-radius: 50%;
+  display: inline-block;
+}
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav .active,
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav .dot:hover {
+  background-color: #717171;
+}
+.whatsOnBody .container .nowShowing h1 {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.whatsOnBody .container .openingTimes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.whatsOnBody .container .openingTimes img {
+  width: 500px;
+  height: 300px;
+  flex: 4;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.whatsOnBody .container .openingTimes .openingText {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.whatsOnBody .container .openingTimes h2 {
+  text-align: center;
+}
+.whatsOnBody .container .showingTimes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  gap: 50px;
+}
+.whatsOnBody .container .showingTimes img {
+  height: 300px;
+  flex: 2;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.whatsOnBody .container .showingTimes .movieTitle {
+  height: 300px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  text-align: center;
+}
+.whatsOnBody .container .showingTimes .movieSynopsis {
+  height: 300px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.whatsOnBody .container .showingTimes .movieSynopsis p {
+  padding: 20px;
+}
+.whatsOnBody .container .showingTimes .screensAndTimes {
+  height: 300px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.whatsOnBody .container .showingTimes .screensAndTimes h3 {
+  text-align: center;
 }
 .whatsOnBody footer {
   display: flex;
