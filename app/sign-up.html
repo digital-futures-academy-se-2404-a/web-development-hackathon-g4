@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../styles.scss">
+	<link rel="stylesheet" href="../styles.css">
 	<title>Document</title>
 </head>
-<body>
 
+<body class="sign-up">
+	<section class="left">
+		<img src="../images//cinema.jpg" alt="View from a cinema seat">
+		<img src="" alt="">
+		<img src="" alt="">
+	</section>
+
+	<section class="right">
+
+		<label for="titleSelect">Title:
+			<select name="titleSelect" id="titleSelect" required>
+				<option value="" disabled selected>Select a title</option>
+				<option value="Dr"></option>
+				<option value="Ms"></option>
+				<option value="Mrs"></option>
+				<option value="Mr"></option>
+				<option value="Prof"></option>
+				<option value="Dr"></option>
+				<option value="Other"></option>
+			</select>
+		</label>
+
+		<label for="firstNameInput">First Name: <input type="text" name="firstNameInput" id="firstNameInput" placeholder="Sydney" required></label>
+
+		<label for="lastNameInput">Last Name: <input type="text" name="lastNameInput" id="lastNameInput" placeholder="Fairchild" required></label>
+
+		<label for="emailInput">Email: <input type="email" name="emailInput" id="emailInput" placeholder="sydney@gmail.com"></label>
+
+	</section>
 </body>
+
 </html>
