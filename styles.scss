@@ -4,4 +4,18 @@ $color-light-blue: #9996db;
 $color-pastel-purple: #c1b5d5;
 $color-light-gray: #d6d6d6;
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700; // Use bold weight if desired
+}
+
+p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400; // Use normal weight
+}
