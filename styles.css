@@ -154,16 +154,11 @@ p {
     width: 500px;
   }
 }
-.whatsOnBody {
-  width: calc(100% - 100px);
-  padding-left: 50px;
-  padding-right: 50px;
-}
-.whatsOnBody header {
+header {
   height: 100px;
   padding-left: 150px;
 }
-.whatsOnBody header .navbar {
+header .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -180,16 +175,16 @@ p {
   -moz-box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
 }
-.whatsOnBody header .navbar img {
+header .navbar img {
   width: 60px;
   height: 60px;
 }
-.whatsOnBody header .navbar h2 {
+header .navbar h2 {
   cursor: pointer;
   position: relative;
   color: #d6d6d6;
 }
-.whatsOnBody header .navbar h2::after {
+header .navbar h2::after {
   content: "";
   width: 0;
   height: 5px;
@@ -199,8 +194,14 @@ p {
   bottom: -6px;
   transition: 0.5s;
 }
-.whatsOnBody header .navbar h2:hover::after {
+header .navbar h2:hover::after {
   width: 105%;
+}
+
+.whatsOnBody {
+  width: calc(100% - 100px);
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .whatsOnBody .container {
   display: flex;
@@ -306,6 +307,7 @@ p {
   flex-direction: column;
   flex: 1;
   justify-content: center;
+  align-items: center;
   background: #2c3a66;
   background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
   background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
@@ -313,7 +315,7 @@ p {
   box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
 }
-.whatsOnBody .container .openingTimes h2 {
+.whatsOnBody .container .openingTimes .openingText h2 {
   text-align: center;
 }
 .whatsOnBody .container .showingTimes {
@@ -377,7 +379,8 @@ p {
 .whatsOnBody .container .showingTimes .screensAndTimes h3 {
   text-align: center;
 }
-.whatsOnBody footer {
+
+footer {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -385,7 +388,7 @@ p {
   align-items: center;
   gap: 50px;
 }
-.whatsOnBody footer .topFooter {
+footer .topFooter {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -395,7 +398,7 @@ p {
   align-items: center;
   gap: 50px;
 }
-.whatsOnBody footer .topFooter .fa {
+footer .topFooter .fa {
   font-size: 30px;
   text-decoration: none;
   width: 30px;
@@ -403,23 +406,23 @@ p {
   padding: 20px;
   border-radius: 50%;
 }
-.whatsOnBody footer .topFooter .fa-facebook {
+footer .topFooter .fa-facebook {
   background: #0866ff;
   color: white;
 }
-.whatsOnBody footer .topFooter .fa-twitter {
+footer .topFooter .fa-twitter {
   background: #08a0e9;
   color: white;
 }
-.whatsOnBody footer .topFooter .fa-instagram {
+footer .topFooter .fa-instagram {
   background: #8134af;
   color: white;
 }
-.whatsOnBody footer .topFooter .fa-reddit {
+footer .topFooter .fa-reddit {
   background: #ff4500;
   color: white;
 }
-.whatsOnBody footer .bottomFooter {
+footer .bottomFooter {
   font-size: 12px;
   font-weight: 500;
   color: #d6d6d6;
