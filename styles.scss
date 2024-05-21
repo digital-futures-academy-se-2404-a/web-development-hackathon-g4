@@ -4,6 +4,10 @@ $color-light-blue: #9996db;
 $color-pastel-purple: #c1b5d5;
 $color-light-gray: #d6d6d6;
 
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
+
+
 @mixin respond-to($media) {
   @if $media == small {
     @media (max-width: 600px) {
@@ -17,6 +21,10 @@ $color-light-gray: #d6d6d6;
     @media (min-width: 901px) and (max-width: 1200px) {
       @content;
     }
+
+  }
+}
+
   } @else if $media == xlarge {
     @media (min-width: 1201px) {
       @content;
@@ -26,19 +34,25 @@ $color-light-gray: #d6d6d6;
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
+
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  margin: 0px;
-  background-color: #0b0f29;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: $color-medium-blue;
+  margin: 0.5px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700; // Use bold weight if desired
 }
 
 p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400; // Use normal weight
 }
 
@@ -141,11 +155,17 @@ p {
         gap: 30px;
         padding: 5px;
       }
+
     }
   .whatsOnBody {
     padding-left: 15px;
     padding-right: 15px;
 
+    h2:hover::after {
+      width: 105%;
+    }
+  }
+}
 
     .container{
       .nowShowing{
@@ -251,9 +271,152 @@ p {
           width: 500px;
         }
       }
+
+    }
+    .fa-instagram {
+      background: #8134af;
+      color: white;
+    }
+    .fa-reddit {
+      background: #ff4500;
+      color: white;
     }
   }
+  .bottomFooter {
+    font-size: 12px;
+    font-weight: 500;
+    color: #d6d6d6;
+  }
 }
+
+.sign-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 140px;
+  margin-bottom: 65px;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    display: flex;
+    height: 200px;
+    width: 358px;
+    overflow: hidden;
+  }
+
+  img {
+    height: auto;
+    width: 400px;
+    object-fit: cover;
+  }
+
+  #sign-up-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 63px;
+    background-color: $color-light-blue;
+    border-radius: 25px;
+  }
+
+  .label-wrapper {
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .form-label {
+    display: inline-block;
+    min-width: 50%;
+    color: white;
+    margin: 0 auto;
+  }
+
+  .form-input {
+    display: inline-block;
+    padding: 0.4rem 0.4rem;
+    border: 1px solid gray;
+    width: 45%;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+  }
+
+  button {
+    display: flex;
+    padding: 0.6rem 0.8rem;
+    background-color: $color-dark-blue;
+    color: $color-light-gray;
+    border-radius: 10px;
+    border: none;
+    max-width: 10rem;
+    justify-content: center;
+    align-self: end;
+    margin-top: 10px;
+  }
+
+  label {
+    display: inline-block;
+    color: white;
+    width: 10rem;
+  }
+
+  .form-input {
+    display: inline-block;
+    width: 200px;
+    padding: 7px;
+    border: none;
+  }
+
+  button {
+    display: flex;
+    float: right;
+    padding: 0.6rem 0.8rem;
+    font-size: large;
+    border: none;
+    width: 120px;
+  }
+}
+
+.whatsOnBody {
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+    .NowShowing {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    .OpeningTimes {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .OpeningTimesImage {
+      grid-column: 2/4;
+      grid-row: 2;
+
 header {
   height: 100px;
   padding-left: 150px;
@@ -553,6 +716,7 @@ footer {
     .fa-reddit{
       background: #ff4500;
       color: white;
+
     }
   }
 }

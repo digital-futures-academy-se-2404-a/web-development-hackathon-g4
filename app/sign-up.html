@@ -6,37 +6,130 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../styles.css">
 	<title>Document</title>
+	<script>
+		document.getElementById("sign-up-form").addEventListener("submit", function (event) {
+			event.preventDefault();
+
+			let errors = [];
+			let title = document.getElementById("title-select").value;
+			let firstName = document.getElementById("first-name-input").value;
+			let lastName = document.getElementById("last-name-input").value;
+			let email = document.getElementById("email-input").value;
+
+			if (title.trim() === "") {
+				errors.push("Title is required.");
+			}
+
+			if (firstName.trim() === "") {
+				errors.push("First name is required.");
+			}
+
+			if (lastName.trim() === "") {
+				errors.push("Last name is required.");
+			}
+
+			if (!validateEmail(email)) {
+				errors.push("Please enter a valid email address.");
+			}
+
+
+			if (errors.length > 0) {
+				document.getElementById("errorMessages").innerHTML = errors.join("<br>");
+			} else {
+				document.getElementById("errorMessages").innerHTML = "";
+				this.submit();
+			}
+		});
+
+		function validateEmail(email) {
+			const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			return re.test(String(email).toLowerCase());
+		}
+	</script>
 </head>
 
-<body class="sign-up">
-	<section class="left">
-		<img src="../images//cinema.jpg" alt="View from a cinema seat">
-		<img src="" alt="">
-		<img src="" alt="">
-	</section>
+<body>
 
-	<section class="right">
+	<header>
+		<div class="navbar">
+			<img src="/images/star.svg" alt="">
+			<a href="/">
+				<h2>Home</h2>
+			</a>
+			<a href="/app/whats-on.html">
+				<h2>What's On</h2>
+			</a>
+			<a href="/sign-up.html">
+				<h2>Sign Up</h2>
+			</a>
+		</div>
+	</header>
 
-		<label for="titleSelect">Title:
-			<select name="titleSelect" id="titleSelect" required>
-				<option value="" disabled selected>Select a title</option>
-				<option value="Dr"></option>
-				<option value="Ms"></option>
-				<option value="Mrs"></option>
-				<option value="Mr"></option>
-				<option value="Prof"></option>
-				<option value="Dr"></option>
-				<option value="Other"></option>
-			</select>
-		</label>
+	<main class="sign-up">
+		<section class="left">
+			<div class="image-wrapper">
+				<img src="../images//cinema.jpg" alt="View from a cinema seat">
+			</div>
+			<div class="image-wrapper">
+				<img src="../images/coming-soon.jpg" alt="A film-making snapper">
+			</div>
+			<div class="image-wrapper">
+				<img src="../images//neon.jpg" alt="Neon lit outdoor view of a cinema">
+			</div>
+		</section>
 
-		<label for="firstNameInput">First Name: <input type="text" name="firstNameInput" id="firstNameInput" placeholder="Sydney" required></label>
+		<section class="right">
 
-		<label for="lastNameInput">Last Name: <input type="text" name="lastNameInput" id="lastNameInput" placeholder="Fairchild" required></label>
+			<form id="sign-up-form" action="/submit" method="post" novalidate>
 
-		<label for="emailInput">Email: <input type="email" name="emailInput" id="emailInput" placeholder="sydney@gmail.com"></label>
+				<div class="label-wrapper">
+					<label for="title-select" class="form-label">Title: </label>
+					<select id="title-select" required class="form-input">
+						<option value="" disabled>Select a title</option>
+						<option value="Ms">Ms</option>
+						<option value="Mrs">Mrs</option>
+						<option value="Mr">Mr</option>
+						<option value="Prof">Prof</option>
+						<option value="Dr">Dr</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+				<div class="label-wrapper">
+					<label for="first-name-input" class="form-label">First Name: </label><input class="form-input" type="text"
+						name="first-name-input" id="first-name-input" placeholder="Sydney" required>
+				</div>
+				<div class="label-wrapper">
+					<label for="last-name-input" class="form-label">Last Name: </label><input class="form-input" type="text"
+						name="last-name-input" id="last-name-input" placeholder="Fairchild" required>
+				</div>
+				<div class="label-wrapper">
+					<label for="email-input" class="form-label">Email: </label><input class="form-input" type="email"
+						name="email-input" id="email-input" placeholder="sydney@gmail.com" required>
+				</div>
+				<div class="label-wrapper">
+					<label for="dob-input" class="form-label">Date of Birth: </label><input class="form-input" type="date"
+						name="dob-input" id="dob-input">
+				</div>
+				<div class="label-wrapper">
+					<label for="phoneInput" class="form-label">Telephone Number: </label><input class="form-input" type="tel"
+						name="tel-input" id="tel-input" placeholder="07807 954809">
+				</div>
+				<button type="submit">Sign Up</button>
+			</form>
+		</section>
+	</main>
 
-	</section>
+	<footer>
+		<div class="topFooter">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<a href="#" class="fa fa-reddit"></a>
+		</div>
+		<div class="bottomFooter">
+			<h2>&#169 DF Cinemas - 2021 -</h2>
+		</div>
+	</footer>
 </body>
 
 </html>
