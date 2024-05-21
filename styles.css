@@ -20,61 +20,11 @@ p {
   font-weight: 400;
 }
 
-.sign-up {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 4rem;
-  gap: 250px;
-}
-@media (max-width: 600px) {
-  .sign-up {
-    flex-direction: column-reverse;
-  }
-}
-.sign-up .image-wrapper {
-  height: 50px;
-  width: 150px;
-}
-.sign-up .image-wrapper img {
-  object-fit: contain;
-}
-.sign-up #sign-up-form {
-  display: flex;
-  flex-direction: column;
-}
-.sign-up label {
-  display: inline-block;
-  color: white;
-  width: 10rem;
-}
-.sign-up .form-input {
-  display: inline-block;
-  width: 50%;
-  padding: 0.2rem 0.2rem;
-  border: none;
-}
-.sign-up button {
-  display: flex;
-  float: right;
-  padding: 0.6rem 0.8rem;
-  background-color: #9996db;
-  color: #2c3a66;
-  border-radius: 0.2rem;
-  font-size: large;
-  border: none;
-}
-
-.whatsOnBody {
-  width: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.whatsOnBody header {
+header {
   height: 100px;
   width: 100%;
 }
-.whatsOnBody header .navbar {
+header .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -88,16 +38,16 @@ p {
   -moz-box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
 }
-.whatsOnBody header .navbar img {
+header .navbar img {
   width: 60px;
   height: 60px;
 }
-.whatsOnBody header .navbar h2 {
+header .navbar h2 {
   cursor: pointer;
   position: relative;
   color: #d6d6d6;
 }
-.whatsOnBody header .navbar h2::after {
+header .navbar h2::after {
   content: "";
   width: 0;
   height: 5px;
@@ -107,8 +57,115 @@ p {
   bottom: -6px;
   transition: 0.5s;
 }
-.whatsOnBody header .navbar h2:hover::after {
+header .navbar h2:hover::after {
   width: 105%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  gap: 50px;
+}
+footer .topFooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 300px;
+  margin-right: 300px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+footer .topFooter .fa {
+  font-size: 30px;
+  text-decoration: none;
+  width: 30px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 50%;
+}
+footer .topFooter .fa-facebook {
+  background: #0866ff;
+  color: white;
+}
+footer .topFooter .fa-twitter {
+  background: #08a0e9;
+  color: white;
+}
+footer .topFooter .fa-instagram {
+  background: #8134af;
+  color: white;
+}
+footer .topFooter .fa-reddit {
+  background: #ff4500;
+  color: white;
+}
+footer .bottomFooter {
+  font-size: 12px;
+  font-weight: 500;
+  color: #d6d6d6;
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 250px;
+}
+.sign-up .left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.sign-up img {
+  object-fit: cover;
+}
+.sign-up .image-wrapper {
+  display: flex;
+  height: 165px;
+  width: 300px;
+  overflow: hidden;
+}
+.sign-up #sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sign-up button {
+  align-self: end;
+  margin-top: 10px;
+}
+.sign-up label {
+  display: inline-block;
+  color: white;
+  width: 10rem;
+}
+.sign-up .form-input {
+  display: inline-block;
+  width: 200px;
+  padding: 7px;
+  border: none;
+}
+.sign-up button {
+  display: flex;
+  float: right;
+  padding: 0.6rem 0.8rem;
+  background-color: #9996db;
+  color: #2c3a66;
+  border-radius: 0.2rem;
+  font-size: large;
+  border: none;
+  width: 120px;
+}
+
+.whatsOnBody {
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .whatsOnBody .grid-container {
   display: grid;
@@ -127,53 +184,6 @@ p {
 .whatsOnBody .grid-container .OpeningTimesImage {
   grid-column: 2/4;
   grid-row: 2;
-}
-.whatsOnBody footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 200px;
-  align-items: center;
-  gap: 50px;
-}
-.whatsOnBody footer .topFooter {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-left: 300px;
-  margin-right: 300px;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-.whatsOnBody footer .topFooter .fa {
-  font-size: 30px;
-  text-decoration: none;
-  width: 30px;
-  text-align: center;
-  padding: 20px;
-  border-radius: 50%;
-}
-.whatsOnBody footer .topFooter .fa-facebook {
-  background: #0866ff;
-  color: white;
-}
-.whatsOnBody footer .topFooter .fa-twitter {
-  background: #08a0e9;
-  color: white;
-}
-.whatsOnBody footer .topFooter .fa-instagram {
-  background: #8134af;
-  color: white;
-}
-.whatsOnBody footer .topFooter .fa-reddit {
-  background: #ff4500;
-  color: white;
-}
-.whatsOnBody footer .bottomFooter {
-  font-size: 12px;
-  font-weight: 500;
-  color: #d6d6d6;
 }
 
 /*# sourceMappingURL=styles.css.map */

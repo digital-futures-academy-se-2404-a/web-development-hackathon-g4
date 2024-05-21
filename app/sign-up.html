@@ -8,61 +8,81 @@
 	<title>Document</title>
 </head>
 
-<body class="sign-up">
-	<section class="left">
-		<!-- <div class="image-wrapper">
-			<img src="../images//cinema.jpg" alt="View from a cinema seat">
+<body>
+
+	<header>
+		<div class="navbar">
+			<img src="/images/star.svg" alt="">
+			<h2>Home</h2>
+			<h2>What's On</h2>
+			<h2>Sign Up</h2>
 		</div>
-		<div class="image-wrapper">
-			<img src="../images/coming-soon.jpg" alt="A film-making snapper">
+	</header>
+
+	<main class="sign-up">
+		<section class="left">
+			<div class="image-wrapper">
+				<img src="../images//cinema.jpg" alt="View from a cinema seat">
+			</div>
+			<div class="image-wrapper">
+				<img src="../images/coming-soon.jpg" alt="A film-making snapper">
+			</div>
+			<div class="image-wrapper">
+				<img src="../images//neon.jpg" alt="Neon lit outdoor view of a cinema">
+			</div>
+		</section>
+
+		<section class="right">
+
+			<form id="sign-up-form" action="/submit" method="post">
+
+				<div class="label-wrapper">
+					<label for="title-select" class="form-label">Title: </label>
+					<select id="title-select" required class="form-input">
+						<option value="" disabled>Select a title</option>
+						<option value="Ms">Ms</option>
+						<option value="Mrs">Mrs</option>
+						<option value="Mr">Mr</option>
+						<option value="Prof">Prof</option>
+						<option value="Dr">Dr</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+				<div class="label-wrapper">
+					<label for="first-name-input" class="form-label">First Name: </label><input class="form-input" type="text"
+						name="first-name-input" id="first-name-input" placeholder="Sydney" required>
+				</div>
+				<div class="label-wrapper">
+					<label for="last-name-input" class="form-label">Last Name: </label><input class="form-input" type="text"
+						name="last-name-input" id="last-name-input" placeholder="Fairchild" required>
+				</div>
+				<div class="label-wrapper">
+					<label for="email-input" class="form-label">Email: </label><input class="form-input" type="email"
+						name="email-input" id="email-input" placeholder="sydney@gmail.com" required>
+				</div>
+				<div class="label-wrapper">
+					<label for="dob-input" class="form-label">Date of Birth: </label><input class="form-input" type="date"
+						name="dob-input" id="dob-input">
+				</div>
+				<div class="label-wrapper">
+					<label for="phoneInput" class="form-label">Telephone Number: </label><input class="form-input" type="tel"
+						name="tel-input" id="tel-input" placeholder="07807 954809">
+				</div>
+				<button type="submit">Sign Me Up</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<div class="topFooter">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<a href="#" class="fa fa-reddit"></a>
 		</div>
-		<div class="image-wrapper">
-			<img src="../images//neon.jpg" alt="Neon lit outdoor view of a cinema">
-		</div> -->
-	</section>
-
-	<section class="right">
-
-		<form id="sign-up-form" action="/submit" method="post">
-
-			<div class="label-wrapper">
-				<label for="title-select" class="form-label">Title: </label>
-				<select id="title-select" required class="form-input">
-					<option value="" disabled>Select a title</option>
-					<option value="Ms">Ms</option>
-					<option value="Mrs">Mrs</option>
-					<option value="Mr">Mr</option>
-					<option value="Prof">Prof</option>
-					<option value="Dr">Dr</option>
-					<option value="Other">Other</option>
-				</select>
-			</div>
-			<div class="label-wrapper">
-				<label for="first-name-input" class="form-label">First Name: </label><input class="form-input" type="text"
-					name="first-name-input" id="first-name-input" placeholder="Sydney" required>
-			</div>
-			<div class="label-wrapper">
-				<label for="last-name-input" class="form-label">Last Name: </label><input class="form-input" type="text"
-					name="last-name-input" id="last-name-input" placeholder="Fairchild" required>
-			</div>
-			<div class="label-wrapper">
-				<label for="email-input" class="form-label">Email: </label><input class="form-input" type="email"
-					name="email-input" id="email-input" placeholder="sydney@gmail.com" required>
-			</div>
-			<div class="label-wrapper">
-				<label for="dob-input" class="form-label">Date of Birth: </label><input class="form-input" type="date"
-					name="dob-input" id="dob-input">
-			</div>
-			<div class="label-wrapper">
-				<label for="phoneInput" class="form-label">Telephone Number: </label><input class="form-input" type="tel"
-					name="tel-input" id="tel-input" placeholder="07807 954809">
-			</div>
-
-			<button type="submit">Sign Me Up</button>
-
-		</form>
-
-	</section>
+		<div class="bottomFooter">
+			<h2>&#169 DF Cinemas - 2021 -</h2>
+		</div>
+	</footer>
 </body>
-
 </html>
