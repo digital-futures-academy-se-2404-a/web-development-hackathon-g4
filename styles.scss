@@ -19,3 +19,13 @@ p {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400; // Use normal weight
 }
+
+sign-up {
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	img {
+		height: 200px;
+		width: 500px;
+	}
+}

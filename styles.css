@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+}
+
+sign-up {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+}
+sign-up img {
+  height: 200px;
+  width: 500px;
+}
+
+/*# sourceMappingURL=styles.css.map */
