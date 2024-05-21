@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Document</title>
+	<script src="/script.js" defer></script>
 </head>
 
 <body class="whatsOnBody">
@@ -20,25 +21,51 @@
 	</header>
 
 	<main>
-		<div class="grid-container">
-			<div class="NowShowing">
+		<div class="container">
+			<div class="nowShowing">
+				<div class="sliderSection">
+					<div class="slider">
+						<img src="/images/whatsOn2.jpg" alt="">
+						<img src="/images/whatsOn4.jpg" alt="">
+						<img src="/images/whatsOn5.jpg" alt="">
+					</div>
+					<div class="sliderNav">
+						<span class="dot active" onclick="changeSlide(0)"></span>
+						<span class="dot" onclick="changeSlide(1)"></span>
+						<span class="dot" onclick="changeSlide(2)"></span>
+					</div>
+				</div>
 				<h1>Now Showing</h1>
 			</div>
-			<div class="OpeningTimes"></div>
-			<h2 class="OpeningTimesText">Opening Times</h2>
-			<ul>
-				<li>Mon-Fri: 9:00-7:30 </li>
-				<li>Sat: 9:00-10:00</li>
-				<li>Sun: 9:00-6:00</li>
-			</ul>
-			<div class="OpeningTimesImage">#
-				<img src="images/CinemaSeatsAndScreen.jpg" alt="Cinema Seats">
+			<div class="openingTimes">
+				<div class="openingText">
+					<h2>Opening Times</h2>
+					<ul>
+						<li>Mon-Fri: 9:00-7:30 </li>
+						<li>Sat: 9:00-10:00</li>
+						<li>Sun: 9:00-6:00</li>
+					</ul>
+				</div>
+				<img src="/images/whatsOn3.jpg" alt="">
 			</div>
-			<div class="CurrentMovie">
-				<img src="" alt="Movie Poster">
-				<div class="Movie Title"></div>
-				<div class="Movie Synopsis"></div>
-				<div class="ShowingTimes"></div>
+			<div class="showingTimes">
+					<img src="/images/MoviePoster.jpg" alt="Movie Poster">
+					<div class="movieTitle">
+						<h2>Movie Title</h2>
+					</div>
+					<div class="movieSynopsis">
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero harum magnam, ut id vel nostrum dolor numquam
+							quas explicabo nesciunt?</p>
+					</div>
+					<div class="screensAndTimes">
+						<h3>Screens and Showing times</h3>
+						<ul>
+							<li>Standard: 11:00, 13:00, 16:00, </li>
+							<li>3D: 13:30, 16:30</li>
+							<li>4DX: 15:00</li>
+							<li>Super IMAX: 16:00</li>
+						</ul>
+					</div>
 			</div>
 		</div>
 		
