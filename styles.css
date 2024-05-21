@@ -133,7 +133,38 @@ footer .bottomFooter {
 .sign-up #sign-up-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: right;
+}
+.sign-up .label-wrapper {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.sign-up .form-label {
+  display: inline-block;
+  min-width: 50%;
+  color: white;
+  margin: 0 auto;
+}
+.sign-up .form-input {
+  display: inline-block;
+  padding: 0.4rem 0.4rem;
+  border: 1px solid gray;
+  width: 45%;
+  margin: 0;
+  box-sizing: content-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+.sign-up button {
+  display: flex;
+  padding: 0.6rem 0.8rem;
+  background-color: #9996db;
+  color: whitesmoke;
+  border-radius: 0.2rem;
+  border: none;
+  max-width: 10rem;
+  justify-content: center;
 }
 .sign-up button {
   align-self: end;
