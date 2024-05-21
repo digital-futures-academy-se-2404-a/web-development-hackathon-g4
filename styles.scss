@@ -1,0 +1,43 @@
+//chat GPT suggestion !!!
+
+$background-color: rgb(11, 15, 41);
+$text-color: rgb(214, 214, 214);
+
+.homepage {
+  
+  background-color: $background-color;
+  color: $text-color;
+  text-align: justify;
+  
+  .homepage-content {
+      display: flex;
+      flex-direction: column;
+      margin: 50px;
+    }
+  
+    .row {
+      display: flex;
+      width: 100%;
+      height: 300px;
+      padding: 20px;
+  
+      img {
+        width: 60%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+      p {
+        width: 40%;
+        padding: 30px;
+        border: 2px solid $text-color;
+      }
+  
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+}
+
+
+
