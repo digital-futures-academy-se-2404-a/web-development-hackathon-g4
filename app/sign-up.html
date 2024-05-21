@@ -6,6 +6,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../styles.css">
 	<title>Document</title>
+	<script>
+		document.getElementById("sign-up-form").addEventListener("submit", function (event) {
+			event.preventDefault();
+
+			let errors = [];
+			let title = document.getElementById("title-select").value;
+			let firstName = document.getElementById("first-name-input").value;
+			let lastName = document.getElementById("last-name-input").value;
+			let email = document.getElementById("email-input").value;
+
+			if (title.trim() === "") {
+				errors.push("Title is required.");
+			}
+
+			if (firstName.trim() === "") {
+				errors.push("First name is required.");
+			}
+
+			if (lastName.trim() === "") {
+				errors.push("Last name is required.");
+			}
+
+			if (!validateEmail(email)) {
+				errors.push("Please enter a valid email address.");
+			}
+
+
+			if (errors.length > 0) {
+				document.getElementById("errorMessages").innerHTML = errors.join("<br>");
+			} else {
+				document.getElementById("errorMessages").innerHTML = "";
+				this.submit();
+			}
+		});
+
+		function validateEmail(email) {
+			const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			return re.test(String(email).toLowerCase());
+		}
+	</script>
 </head>
 
 <body>
@@ -13,9 +53,15 @@
 	<header>
 		<div class="navbar">
 			<img src="/images/star.svg" alt="">
-			<h2>Home</h2>
-			<h2>What's On</h2>
-			<h2>Sign Up</h2>
+			<a href="/">
+				<h2>Home</h2>
+			</a>
+			<a href="/app/whats-on.html">
+				<h2>What's On</h2>
+			</a>
+			<a href="/sign-up.html">
+				<h2>Sign Up</h2>
+			</a>
 		</div>
 	</header>
 
@@ -34,7 +80,7 @@
 
 		<section class="right">
 
-			<form id="sign-up-form" action="/submit" method="post">
+			<form id="sign-up-form" action="/submit" method="post" novalidate>
 
 				<div class="label-wrapper">
 					<label for="title-select" class="form-label">Title: </label>
@@ -68,7 +114,7 @@
 					<label for="phoneInput" class="form-label">Telephone Number: </label><input class="form-input" type="tel"
 						name="tel-input" id="tel-input" placeholder="07807 954809">
 				</div>
-				<button type="submit">Sign Me Up</button>
+				<button type="submit">Sign Up</button>
 			</form>
 		</section>
 	</main>
@@ -85,4 +131,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>

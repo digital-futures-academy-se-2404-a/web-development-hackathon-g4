@@ -145,7 +145,8 @@ footer {
   flex-direction: row;
   justify-content: center;
   margin-top: 4rem;
-  gap: 250px;
+  gap: 140px;
+  margin-bottom: 65px;
 
   .left {
     display: flex;
@@ -153,21 +154,33 @@ footer {
     gap: 25px;
   }
 
-  img {
-    object-fit: cover;
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .image-wrapper {
     display: flex;
-    height: 165px;
-    width: 300px;
+    height: 200px;
+    width: 358px;
     overflow: hidden;
+  }
+
+  img {
+    height: auto;
+    width: 400px;
+    object-fit: cover;
   }
 
   #sign-up-form {
     display: flex;
     flex-direction: column;
     justify-content: right;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 63px;
+    background-color: $color-light-blue;
+    border-radius: 25px;
   }
 
   .label-wrapper {
@@ -197,15 +210,12 @@ footer {
   button {
     display: flex;
     padding: 0.6rem 0.8rem;
-    background-color: $color-light-blue;
-    color: whitesmoke;
-    border-radius: 0.2rem;
+    background-color: $color-dark-blue;
+    color: $color-light-gray;
+    border-radius: 10px;
     border: none;
     max-width: 10rem;
     justify-content: center;
-  }
-
-  button {
     align-self: end;
     margin-top: 10px;
   }
@@ -227,9 +237,6 @@ footer {
     display: flex;
     float: right;
     padding: 0.6rem 0.8rem;
-    background-color: $color-light-blue;
-    color: $color-medium-blue;
-    border-radius: 0.2rem;
     font-size: large;
     border: none;
     width: 120px;

@@ -114,26 +114,38 @@ footer .bottomFooter {
   flex-direction: row;
   justify-content: center;
   margin-top: 4rem;
-  gap: 250px;
+  gap: 140px;
+  margin-bottom: 65px;
 }
 .sign-up .left {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.sign-up img {
-  object-fit: cover;
+.sign-up .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sign-up .image-wrapper {
   display: flex;
-  height: 165px;
-  width: 300px;
+  height: 200px;
+  width: 358px;
   overflow: hidden;
+}
+.sign-up img {
+  height: auto;
+  width: 400px;
+  object-fit: cover;
 }
 .sign-up #sign-up-form {
   display: flex;
   flex-direction: column;
   justify-content: right;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 63px;
+  background-color: #9996db;
+  border-radius: 25px;
 }
 .sign-up .label-wrapper {
   padding: 1.5rem 0;
@@ -159,14 +171,12 @@ footer .bottomFooter {
 .sign-up button {
   display: flex;
   padding: 0.6rem 0.8rem;
-  background-color: #9996db;
-  color: whitesmoke;
-  border-radius: 0.2rem;
+  background-color: #0b0f29;
+  color: #d6d6d6;
+  border-radius: 10px;
   border: none;
   max-width: 10rem;
   justify-content: center;
-}
-.sign-up button {
   align-self: end;
   margin-top: 10px;
 }
@@ -185,9 +195,6 @@ footer .bottomFooter {
   display: flex;
   float: right;
   padding: 0.6rem 0.8rem;
-  background-color: #9996db;
-  color: #2c3a66;
-  border-radius: 0.2rem;
   font-size: large;
   border: none;
   width: 120px;
