@@ -9,8 +9,6 @@ $color-light-gray: #d6d6d6;
   color: $color-light-gray;
   text-align: justify;
 
-  
-
   .homepage-content {
     display: flex;
     flex-direction: column;
@@ -26,16 +24,20 @@ $color-light-gray: #d6d6d6;
         width: 60%;
         padding-left: 20px;
         padding-right: 20px;
-        border-radius: 20px;
+        border-radius: 15px;
       }
 
       p {
         width: 40%;
         padding: 30px;
-        border: 2px solid $color-light-gray;
-        border-radius: 20px;
+        border-radius: 25px;
         overflow: auto;
         text-overflow: ellipsis;
+        background: #2c3a66;
+        background:linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+        background: -webkit-gradient(80deg, #2c3a66 0%, #9996db 99%);
+        background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+        box-shadow: 20px 15px 25px 0px rgba(0,0,0,0.1%);
       }
 
       
@@ -68,4 +70,4 @@ $color-light-gray: #d6d6d6;
     }
   }
 }
-// sass --watch style.scss:style.css
+
