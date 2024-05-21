@@ -10,31 +10,50 @@
 
 <body class="sign-up">
 	<section class="left">
-		<img src="../images//cinema.jpg" alt="View from a cinema seat">
-		<img src="" alt="">
-		<img src="" alt="">
+		<!-- <div class="image-wrapper">
+			<img src="../images//cinema.jpg" alt="View from a cinema seat">
+		</div>
+		<div class="image-wrapper">
+			<img src="../images/coming-soon.jpg" alt="A film-making snapper">
+		</div>
+		<div class="image-wrapper">
+			<img src="../images//neon.jpg" alt="Neon lit outdoor view of a cinema">
+		</div> -->
 	</section>
 
 	<section class="right">
 
-		<label for="titleSelect">Title:
-			<select name="titleSelect" id="titleSelect" required>
-				<option value="" disabled selected>Select a title</option>
-				<option value="Dr"></option>
-				<option value="Ms"></option>
-				<option value="Mrs"></option>
-				<option value="Mr"></option>
-				<option value="Prof"></option>
-				<option value="Dr"></option>
-				<option value="Other"></option>
+		<form id="sign-up-form" action="/submit" method="post">
+
+			<label for="title-select" class="form-label">Title: </label>
+			<select required class="form-input">
+				<option value="" disabled>Select a title</option>
+				<option value="Ms">Ms</option>
+				<option value="Mrs">Mrs</option>
+				<option value="Mr">Mr</option>
+				<option value="Prof">Prof</option>
+				<option value="Dr">Dr</option>
+				<option value="Other">Other</option>
 			</select>
-		</label>
 
-		<label for="firstNameInput">First Name: <input type="text" name="firstNameInput" id="firstNameInput" placeholder="Sydney" required></label>
+			<label for="first-name-input" class="form-label">First Name: </label><input class="form-input" type="text"
+					name="first-name-input" id="first-name-input" placeholder="Sydney" required>
 
-		<label for="lastNameInput">Last Name: <input type="text" name="lastNameInput" id="lastNameInput" placeholder="Fairchild" required></label>
+			<label for="last-name-input" class="form-label">Last Name: </label><input class="form-input" type="text" name="last-name-input"
+					id="last-name-input" placeholder="Fairchild" required>
 
-		<label for="emailInput">Email: <input type="email" name="emailInput" id="emailInput" placeholder="sydney@gmail.com"></label>
+			<label for="email-input" class="form-label">Email: </label><input class="form-input" type="email" name="email-input"
+					id="email-input" placeholder="sydney@gmail.com" required>
+
+			<label for="dob-input" class="form-label">Date of Birth: </label><input class="form-input" type="date" name="dob-input"
+					id="dob-input">
+
+			<label for="phoneInput" class="form-label">Telephone Number: </label><input class="form-input" type="tel" name="tel-input"
+					id="tel-input" placeholder="07807 954809">
+
+			<button type="submit">Sign Me Up</button>
+
+		</form>
 
 	</section>
 </body>
