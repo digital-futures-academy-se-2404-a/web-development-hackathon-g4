@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap");
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #0b0f29;
+  margin: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+}
+
+.homepage {
+  background-color: #0b0f29;
+  color: #d6d6d6;
+  text-align: justify;
+}
+.homepage .homepage-content {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+.homepage .homepage-content .row {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+}
+.homepage .homepage-content .row img {
+  width: 60%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+}
+.homepage .homepage-content .row p {
+  width: 40%;
+  padding: 40px;
+  border-radius: 25px;
+  overflow: auto;
+  text-overflow: ellipsis;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.001);
+}
+@media (max-width: 600px) {
+  .homepage .homepage-content .row {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+  .homepage .homepage-content .row img {
+    width: 100%;
+    height: 200px;
+    margin: 5px;
+    padding: 5px;
+    order: 1;
+  }
+  .homepage .homepage-content .row p {
+    width: 100%;
+    height: 200px;
+    margin: 5px;
+    padding: 15px;
+    order: 2;
+  }
+  .homepage .homepage-content .row.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: row;
+}
+.sign-up img {
+  height: 200px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0 !important;
+  }
+  header .navbar {
+    gap: 30px;
+    padding: 5px;
+  }
+  .whatsOnBody {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .whatsOnBody h2:hover::after {
+    width: 105%;
+  }
+}
+.container .nowShowing {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  gap: 20px !important;
+}
+.container .nowShowing h1 {
+  height: 50% !important;
+}
+.container .openingTimes {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  gap: 20px !important;
+}
+.container .openingTimes .openingText {
+  height: 60% !important;
+  padding: 8px;
+}
+.container .showingTimes {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  gap: 20px !important;
+}
+.container .showingTimes .movieTitle {
+  height: 180px !important;
+}
+.container .showingTimes .movieSynopsis {
+  height: 180px !important;
+}
+.container .showingTimes .movieSynopsis p {
+  font-size: 12px;
+}
+.container .showingTimes .screensAndTimes {
+  height: 180px !important;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .whatsOnBody {
+    width: calc(100% - 20px);
+    padding-left: 45px !important;
+    padding-right: 10px !important;
+  }
+  .whatsOnBody .container {
+    align-items: center;
+  }
+  .whatsOnBody .container .nowShowing {
+    flex-direction: column !important;
+  }
+  .whatsOnBody .container .nowShowing .sliderSection {
+    width: 500px;
+  }
+  .whatsOnBody .container .nowShowing h1 {
+    width: 500px;
+  }
+  .whatsOnBody .container .openingTimes {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 12px;
+    flex-direction: column !important;
+  }
+  .whatsOnBody .container .openingTimes .openingText {
+    width: 500px;
+    align-items: center;
+  }
+  .whatsOnBody .container .showingTimes {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    flex-direction: column !important;
+  }
+  .whatsOnBody .container .showingTimes img {
+    width: 500px;
+  }
+  .whatsOnBody .container .showingTimes .movieTitle {
+    width: 500px;
+  }
+  .whatsOnBody .container .showingTimes .screensAndTimes {
+    width: 500px;
+  }
+  .whatsOnBody .fa-instagram {
+    background: #8134af;
+    color: white;
+  }
+  .whatsOnBody .fa-reddit {
+    background: #ff4500;
+    color: white;
+  }
+  .bottomFooter {
+    font-size: 12px;
+    font-weight: 500;
+    color: #d6d6d6;
+  }
+}
+.sign-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 140px;
+  margin-bottom: 65px;
+}
+.sign-up .left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.sign-up .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up .image-wrapper {
+  display: flex;
+  height: 200px;
+  width: 358px;
+  overflow: hidden;
+}
+.sign-up img {
+  height: auto;
+  width: 400px;
+  object-fit: cover;
+}
+.sign-up #sign-up-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 63px;
+  background-color: #9996db;
+  border-radius: 25px;
+}
+.sign-up .label-wrapper {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.sign-up .form-label {
+  display: inline-block;
+  min-width: 50%;
+  color: white;
+  margin: 0 auto;
+}
+.sign-up .form-input {
+  display: inline-block;
+  padding: 0.4rem 0.4rem;
+  border: 1px solid gray;
+  width: 45%;
+  margin: 0;
+  box-sizing: content-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+.sign-up button {
+  display: flex;
+  padding: 0.6rem 0.8rem;
+  background-color: #0b0f29;
+  color: #d6d6d6;
+  border-radius: 10px;
+  border: none;
+  max-width: 10rem;
+  justify-content: center;
+  align-self: end;
+  margin-top: 10px;
+}
+.sign-up label {
+  display: inline-block;
+  color: white;
+  width: 10rem;
+}
+.sign-up .form-input {
+  display: inline-block;
+  width: 200px;
+  padding: 7px;
+  border: none;
+}
+.sign-up button {
+  display: flex;
+  float: right;
+  padding: 0.6rem 0.8rem;
+  font-size: large;
+  border: none;
+  width: 120px;
+}
+
+header {
+  height: 100px;
+  padding-left: 150px;
+}
+header .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  max-width: 550px;
+  padding: 10px;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 11px 3px rgba(0, 0, 0, 0.75);
+}
+header .navbar img {
+  width: 60px;
+  height: 60px;
+}
+header .navbar a {
+  text-decoration: none;
+}
+header .navbar h2 {
+  cursor: pointer;
+  position: relative;
+  color: #d6d6d6;
+}
+header .navbar h2::after {
+  content: "";
+  width: 0;
+  height: 5px;
+  background-color: #2c3a66;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+header .navbar h2:hover::after {
+  width: 105%;
+}
+
+.whatsOnBody {
+  width: calc(100% - 100px);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.whatsOnBody .container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  width: 100%;
+  color: #d6d6d6;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.whatsOnBody .container .nowShowing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+  height: 340px;
+}
+.whatsOnBody .container .nowShowing .sliderSection {
+  flex: 4;
+  height: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.whatsOnBody .container .nowShowing .sliderSection .slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.whatsOnBody .container .nowShowing .sliderSection .slider img {
+  height: 300px;
+  width: 100%;
+  border-radius: 25px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.8s;
+  object-fit: cover;
+}
+.whatsOnBody .container .nowShowing .sliderSection .slider img:first-child {
+  z-index: 10;
+}
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ececec;
+  border-radius: 50%;
+  display: inline-block;
+}
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav .active,
+.whatsOnBody .container .nowShowing .sliderSection .sliderNav .dot:hover {
+  background-color: #717171;
+}
+.whatsOnBody .container .nowShowing h1 {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.whatsOnBody .container .openingTimes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.whatsOnBody .container .openingTimes img {
+  width: 500px;
+  height: 300px;
+  flex: 4;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.whatsOnBody .container .openingTimes .openingText {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.whatsOnBody .container .openingTimes h2 {
+  text-align: center;
+}
+.whatsOnBody .container .showingTimes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  gap: 50px;
+}
+.whatsOnBody .container .showingTimes img {
+  height: 300px;
+  flex: 2;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.whatsOnBody .container .showingTimes .movieTitle {
+  height: 300px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  text-align: center;
+}
+.whatsOnBody .container .showingTimes .movieSynopsis {
+  height: 300px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.whatsOnBody .container .showingTimes .movieSynopsis p {
+  padding: 20px;
+}
+.whatsOnBody .container .showingTimes .screensAndTimes {
+  height: 300px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #2c3a66;
+  background: linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -webkit-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  background: -moz-linear-gradient(80deg, #2c3a66 0%, #9996db 99%);
+  box-shadow: 20px 15px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.whatsOnBody .container .showingTimes .screensAndTimes h3 {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  gap: 50px;
+}
+footer .topFooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 300px;
+  margin-right: 300px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+footer .topFooter .fa {
+  font-size: 30px;
+  text-decoration: none;
+  width: 30px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 50%;
+}
+footer .topFooter .fa-facebook {
+  background: #0866ff;
+  color: white;
+}
+footer .topFooter .fa-twitter {
+  background: #08a0e9;
+  color: white;
+}
+footer .topFooter .fa-instagram {
+  background: #8134af;
+  color: white;
+}
+footer .topFooter .fa-reddit {
+  background: #ff4500;
+  color: white;
+}
+footer .bottomFooter {
+  color: #d8d8d8;
+}
+
+/*# sourceMappingURL=styles.css.map */
