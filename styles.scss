@@ -19,16 +19,13 @@ $color-light-gray: #d6d6d6;
     @media (min-width: 901px) and (max-width: 1200px) {
       @content;
     }
-  } @else if $media == xlarge {
-    @media (min-width: 1201px) {
-      @content;
-    }
   }
+}
 
   body {
     font-family: "Plus Jakarta Sans", sans-serif;
     background-color: $color-medium-blue;
-    margin: 0;
+    margin: 0.5px;
   }
 
   h1,
@@ -66,17 +63,22 @@ $color-light-gray: #d6d6d6;
       object-fit: contain;
     }
 
-    .form-label {
+    #sign-up-form {
       display: flex;
-      padding: 1rem 4rem;
+      flex-direction: column;
+    }
+
+    label {
+      display: inline-block;
       color: white;
+      width: 10rem;
     }
 
     .form-input {
-      display: flex;
-      float: right;
+      display: inline-block;
       width: 50%;
-      padding: 0.2rem 0.3rem;
+      padding: 0.2rem 0.2rem;
+      border: none;
     }
 
     button {
@@ -215,4 +217,3 @@ $color-light-gray: #d6d6d6;
       }
     }
   }
-}

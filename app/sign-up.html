@@ -25,31 +25,38 @@
 
 		<form id="sign-up-form" action="/submit" method="post">
 
-			<label for="title-select" class="form-label">Title: </label>
-			<select id="title-select" required class="form-input">
-				<option value="" disabled>Select a title</option>
-				<option value="Ms">Ms</option>
-				<option value="Mrs">Mrs</option>
-				<option value="Mr">Mr</option>
-				<option value="Prof">Prof</option>
-				<option value="Dr">Dr</option>
-				<option value="Other">Other</option>
-			</select>
-
-			<label for="first-name-input" class="form-label">First Name: </label><input class="form-input" type="text"
+			<div class="label-wrapper">
+				<label for="title-select" class="form-label">Title: </label>
+				<select id="title-select" required class="form-input">
+					<option value="" disabled>Select a title</option>
+					<option value="Ms">Ms</option>
+					<option value="Mrs">Mrs</option>
+					<option value="Mr">Mr</option>
+					<option value="Prof">Prof</option>
+					<option value="Dr">Dr</option>
+					<option value="Other">Other</option>
+				</select>
+			</div>
+			<div class="label-wrapper">
+				<label for="first-name-input" class="form-label">First Name: </label><input class="form-input" type="text"
 					name="first-name-input" id="first-name-input" placeholder="Sydney" required>
-
-			<label for="last-name-input" class="form-label">Last Name: </label><input class="form-input" type="text" name="last-name-input"
-					id="last-name-input" placeholder="Fairchild" required>
-
-			<label for="email-input" class="form-label">Email: </label><input class="form-input" type="email" name="email-input"
-					id="email-input" placeholder="sydney@gmail.com" required>
-
-			<label for="dob-input" class="form-label">Date of Birth: </label><input class="form-input" type="date" name="dob-input"
-					id="dob-input">
-
-			<label for="phoneInput" class="form-label">Telephone Number: </label><input class="form-input" type="tel" name="tel-input"
-					id="tel-input" placeholder="07807 954809">
+			</div>
+			<div class="label-wrapper">
+				<label for="last-name-input" class="form-label">Last Name: </label><input class="form-input" type="text"
+					name="last-name-input" id="last-name-input" placeholder="Fairchild" required>
+			</div>
+			<div class="label-wrapper">
+				<label for="email-input" class="form-label">Email: </label><input class="form-input" type="email"
+					name="email-input" id="email-input" placeholder="sydney@gmail.com" required>
+			</div>
+			<div class="label-wrapper">
+				<label for="dob-input" class="form-label">Date of Birth: </label><input class="form-input" type="date"
+					name="dob-input" id="dob-input">
+			</div>
+			<div class="label-wrapper">
+				<label for="phoneInput" class="form-label">Telephone Number: </label><input class="form-input" type="tel"
+					name="tel-input" id="tel-input" placeholder="07807 954809">
+			</div>
 
 			<button type="submit">Sign Me Up</button>
 
